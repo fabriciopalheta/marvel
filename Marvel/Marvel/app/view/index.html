@@ -1,0 +1,44 @@
+<html ng-app="marvelBuscaApp">
+    <head>
+        <title>Marvel</title>
+        <link rel="stylesheet" href="../../css/bootstrap.css"/>
+        <link rel="stylesheet" href="../../css/meu.css"/>   
+        <script src="../../../angular/angular.js"></script>           
+        <script src="../app.js"></script>
+        <script src="../../app/Controllers/marvelBuscaApp.js"></script>     
+        <script src="../Configuration/baseurl.js"></script>   
+        <meta charset="utf-8" />
+    </head>
+    <body >
+        <div class="row-fuid"  ng-controller="indexController">
+            <div class="flex-fluid sombraBaixa" style="height:25%; background-color:rgb(148, 5, 5) ;">
+                <div class="col-m d-6 col-sm-12 text-center" > 
+                     <span class="text-center" style="font-weight: bolder; font-size:70px; color:darkgoldenrod;">{{mainTitle}}</span>
+                </div>
+             </div>
+             <div>
+                
+             </div>
+             <br>
+            <div class="container backContainer">
+             <div class="flex-container  text-center" >
+                 <label class="text-center col textoBusca" >
+                     Busque aqui seus Heróis &nbsp;
+                 </label>
+                 <input type="text" class="form-control col-md-6 col-sm-12" placeholder="Digite aqui o Nome dos Seus Heróis" />
+                 <br/>  
+                 <button type="button" class="btn btn-secondary btn-lg btn-block">Buscar Heróis</button>
+             </div>
+             <br>
+             <hr/>
+             <div class="container">
+                 <div col>
+                    
+                 </div>
+             </div>
+             </div>
+            </div>
+        </div>      
+      
+    </body>
+</html>
