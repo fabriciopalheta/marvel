@@ -5,12 +5,15 @@
         <link rel="stylesheet" href="../../css/meu.css"/>   
         <script src="../../../angular/angular.js"></script>           
         <script src="../app.js"></script>
-        <script src="../../app/Controllers/marvelBuscaApp.js"></script>     
-        <script src="../Configuration/baseurl.js"></script>   
+        <script src="../../app/Controllers/marvelBuscaApp.js"></script>  
+       <script src="../Services/marvelService.js"></script>
+        <script src="../Configuration/baseurl.js"></script> 
+        <script src="../../../node_modules/crypto-js/crypto-js.js"></script>  
         <meta charset="utf-8" />
     </head>
-    <body >
+    <body  >
         <div class="row-fuid"  ng-controller="indexController">
+        <form ng-init="init()" >
             <div class="flex-fluid sombraBaixa" style="height:25%; background-color:rgb(148, 5, 5) ;">
                 <div class="col-m d-6 col-sm-12 text-center" > 
                      <span class="text-center" style="font-weight: bolder; font-size:70px; color:darkgoldenrod;">{{mainTitle}}</span>
@@ -25,20 +28,18 @@
                  <label class="text-center col textoBusca" >
                      Busque aqui seus Heróis &nbsp;
                  </label>
-                 <input type="text" class="form-control col-md-6 col-sm-12" placeholder="Digite aqui o Nome dos Seus Heróis" />
-                 <br/>  
-                 <button type="button" class="btn btn-secondary btn-lg btn-block">Buscar Heróis</button>
-             </div>
-             <br>
-             <hr/>
-             <div class="container">
-                 <div col>
-                    
-                 </div>
-             </div>
+                 <input type="text"  class="form-control col-md-6 col-sm-12" ng-model="paramBusca" placeholder="Digite aqui o Nome dos Seus Heróis" /><br>
+                 <button class="btn btn-info btn-lg" ng-click="GerByname(paramBusca)">Buscar</button><br>
+                
+             <div class="container" ng-if="paramBusca" >
+                <div class="row" ng-repeat="hero in HeroesListShow">
+                   <div class="row">
+                       <div class="col-md-3" ><h4 class="t1">Nome: </h4></div>
+                       <div class="col-md-3" ><h4 style="text-align: left; font-family:arial; color:RED; font-weight: boldQ;"><a href="#" ng-click="GetInfo(hero.id)">{{hero.name}}</a></h4></div>
+                </div>
              </div>
             </div>
         </div>      
-      
+        </form>
     </body>
 </html>

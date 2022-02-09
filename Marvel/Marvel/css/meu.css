@@ -40,3 +40,10 @@ body
    position: relative;
   
 }
+
+t1 {
+     color: rgb(36, 36, 36); font-family: 'Helvetica Neue', sans-serif; font-size: 275px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: left; }
+
+t2 {
+     color: rgb(94, 28, 28); font-family: 'Helvetica Neue', sans-serif; font-size: 275px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+     
